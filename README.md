@@ -1,21 +1,26 @@
 # 1Fi EMI Product Web Application
 
-This is a full-stack web application built for the 1Fi SDE1 Assignment. It displays products with multiple EMI plans backed by mutual funds, fetching all data dynamically from a backend API connected to a MongoDB database.
+This is a full-stack web application built for the 1Fi SDE1 Assignment. It displays products with multiple EMI plans, fetching all data dynamically from a backend API connected to a MongoDB database. All product images are securely hosted on Cloudinary.
 
-## Tech Stack Used
-* **Frontend:** React.js, Tailwindcss
+## 🚀 Live Links
+* **Frontend Application (Vercel):** [https://1fi-one.vercel.app/](https://1fi-one.vercel.app/)
+* **Backend API:** [https://voice.colvo.co.in/api/products](https://voice.colvo.co.in/api/products)
+
+## 🛠 Tech Stack Used
+* **Frontend:** React.js, Vite, **Tailwind CSS** (Utility-first CSS framework for rapid UI development and premium design)
 * **Backend:** Node.js, Express.js
 * **Database:** MongoDB Atlas (NoSQL)
+* **Image Hosting:** Cloudinary
 
-## Core Functionality Implemented
+## ✨ Core Functionality Implemented
 * **Dynamic Product Pages:** Displays product name, variant (storage/color), MRP, price, and dynamically updating images based on variant selection.
 * **EMI Plans:** A list of EMI plans displaying monthly amount, tenure, interest rate, and cashback.
 * **Selection:** Clickable variants and selectable EMI plans that dynamically update the "Proceed" button.
-* **API Driven:** 100% data is loaded via backend APIs (no hardcoded frontend data).
+* **API Driven:** 100% of the data is loaded via backend APIs (no hardcoded frontend data).
 * **Unique Routing:** `/:slug` routes for SEO and direct product linking (e.g., `/products/iphone-17-pro`).
-* **Products:** 3 products (iPhone 17 Pro, Samsung S25 Ultra, OnePlus 13), each with 2-3 color variants.
+* **Cloudinary Integration:** Images are uploaded and served via Cloudinary CDN for optimal performance.
 
-##  Database Schema
+## 📦 Database Schema
 
 **Product Schema (`backend/models/Product.js`):**
 ```javascript
@@ -33,7 +38,7 @@ This is a full-stack web application built for the 1Fi SDE1 Assignment. It displ
     colorHex: String,
     mrp: Number,
     price: Number,
-    image: String
+    image: String // Cloudinary URL
   }],
   emiPlans: [{
     tenure: Number,
@@ -61,7 +66,7 @@ This is a full-stack web application built for the 1Fi SDE1 Assignment. It displ
       {
         "color": "Silver",
         "price": 127400,
-        "image": "http://localhost:5000/brain/..."
+        "image": "https://res.cloudinary.com/dy1flnpei/image/upload/v1788516297/emi-products/iphone_silver.jpg"
       }
     ],
     "emiPlans": [
@@ -75,21 +80,19 @@ This is a full-stack web application built for the 1Fi SDE1 Assignment. It displ
 }
 ```
 
-## 🛠️ Setup & Run Instructions
+## 💻 Local Setup & Run Instructions
 
-### 1. Database Setup
-The app connects to a live MongoDB Atlas cluster. The connection string is provided in the `.env` file in the backend.
-
-### 2. Start the Backend
+### 1. Backend Setup
+The app connects to a live MongoDB Atlas cluster and uses Cloudinary. Make sure your `.env` is configured correctly.
 ```bash
 cd backend
 npm install
-npm run seed  # (Optional) Seed the database with products
 npm run dev
 ```
-*Backend runs on `http://localhost:5000`*
+*Backend runs on `http://localhost:5050` (or as defined in PORT)*
 
-### 3. Start the Frontend
+### 2. Frontend Setup
+Make sure the `VITE_API_URL` inside `frontend/.env` points to the correct backend API.
 ```bash
 cd frontend
 npm install
