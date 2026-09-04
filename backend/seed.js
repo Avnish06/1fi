@@ -29,8 +29,7 @@ const products = [
         colorHex: '#C0C0C0',
         mrp: 134900,
         price: 127400,
-        image:
-          'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202409-6-9inch-silvertitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=eXN0ZmNsMTlBWG1YS3hOSVJzMlMydHp2VGtzZTNnWjVQQ1hsSmVTTytKaE1lRFpLakRmNlFmcmk2U1kvMFpDT0RXdjgwemFJR1ByRnhFTTBIYWlHcUI0UXNsRC8vZEZCbEtrNkhLR0hORlBhQ3dKSjNuNzllN1N5S0N0SmJDQg',
+        image: 'http://localhost:5000/images/iphone_silver.jpg',
       },
       {
         variantId: 'iphone-17-pro-desert-titanium-256gb',
@@ -39,7 +38,7 @@ const products = [
         colorHex: '#C2A882',
         mrp: 134900,
         price: 127400,
-        image: 'https://dummyimage.com/800x800/f8fafc/6d28d9.png&text=iPhone+17+Pro+Titanium',
+        image: 'http://localhost:5000/images/iphone_desert.jpg',
       },
       {
         variantId: 'iphone-17-pro-black-512gb',
@@ -48,7 +47,7 @@ const products = [
         colorHex: '#2C2C2C',
         mrp: 154900,
         price: 147400,
-        image: 'https://dummyimage.com/800x800/f8fafc/6d28d9.png&text=iPhone+17+Pro+Blue',
+        image: 'http://localhost:5000/images/iphone_black.jpg',
       },
     ],
     emiPlans: [
@@ -79,7 +78,7 @@ const products = [
         colorHex: '#1C1C1E',
         mrp: 129999,
         price: 119999,
-        image: 'https://dummyimage.com/800x800/f8fafc/6d28d9.png&text=Galaxy+S25+Ultra+Black',
+        image: 'http://localhost:5000/images/samsung.jpg',
       },
       {
         variantId: 'samsung-s25-ultra-titanium-silver-blue-256gb',
@@ -88,7 +87,7 @@ const products = [
         colorHex: '#8BA7B8',
         mrp: 129999,
         price: 119999,
-        image: 'https://dummyimage.com/800x800/f8fafc/6d28d9.png&text=Galaxy+S25+Ultra+Gray',
+        image: 'http://localhost:5000/images/samsung.jpg',
       },
       {
         variantId: 'samsung-s25-ultra-titanium-gray-512gb',
@@ -97,7 +96,7 @@ const products = [
         colorHex: '#6B6B6B',
         mrp: 149999,
         price: 139999,
-        image: 'https://dummyimage.com/800x800/f8fafc/6d28d9.png&text=Galaxy+S25+Ultra+Gray',
+        image: 'http://localhost:5000/images/samsung.jpg',
       },
     ],
     emiPlans: [
@@ -128,7 +127,7 @@ const products = [
         colorHex: '#1B3A4B',
         mrp: 74999,
         price: 69999,
-        image: 'https://dummyimage.com/800x800/f8fafc/6d28d9.png&text=OnePlus+13+Midnight',
+        image: 'http://localhost:5000/images/oneplus.jpg',
       },
       {
         variantId: 'oneplus-13-arctic-dawn-256gb',
@@ -137,7 +136,7 @@ const products = [
         colorHex: '#E8E4DC',
         mrp: 74999,
         price: 69999,
-        image: 'https://dummyimage.com/800x800/f8fafc/6d28d9.png&text=OnePlus+13+Emerald',
+        image: 'http://localhost:5000/images/oneplus.jpg',
       },
     ],
     emiPlans: [

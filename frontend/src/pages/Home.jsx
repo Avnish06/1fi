@@ -26,7 +26,7 @@ export default function Home() {
     document.title = 'EasyEMI — Buy Smartphones on Easy EMI Plans';
     axios
       .get(`${API}/products`)
-      .then((res) => setProducts(res.data.data))
+      .then((res) => setProducts(res.data.data || []))
       .catch(() => setError('Failed to load products. Make sure the backend is running.'))
       .finally(() => setLoading(false));
   }, []);

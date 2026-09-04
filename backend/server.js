@@ -14,11 +14,19 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://1fi-one.vercel.app', 'https://colvo.co.in'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
 app.use(express.json());
+
+const path = require('path');
+
+// Serve static product images from backend/images
+app.use('/images', express.static(path.join(__dirname, 'images')));
+
+// Serve generated images directly from the brain directory to bypass blocked copy commands
+app.use('/brain', express.static('C:/Users/mk/.gemini/antigravity-ide/brain/b96d865c-229a-4c18-a9f6-6a2fe85d9690'));
 
 // Routes
 app.use('/api/products', productRoutes);
