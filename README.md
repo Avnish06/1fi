@@ -2,12 +2,12 @@
 
 This is a full-stack web application built for the 1Fi SDE1 Assignment. It displays products with multiple EMI plans backed by mutual funds, fetching all data dynamically from a backend API connected to a MongoDB database.
 
-## 🚀 Tech Stack Used
-* **Frontend:** React.js, Vanilla CSS (Clueso-inspired premium design)
+## Tech Stack Used
+* **Frontend:** React.js, Tailwindcss
 * **Backend:** Node.js, Express.js
 * **Database:** MongoDB Atlas (NoSQL)
 
-## ✨ Core Functionality Implemented
+## Core Functionality Implemented
 * **Dynamic Product Pages:** Displays product name, variant (storage/color), MRP, price, and dynamically updating images based on variant selection.
 * **EMI Plans:** A list of EMI plans displaying monthly amount, tenure, interest rate, and cashback.
 * **Selection:** Clickable variants and selectable EMI plans that dynamically update the "Proceed" button.
@@ -15,7 +15,7 @@ This is a full-stack web application built for the 1Fi SDE1 Assignment. It displ
 * **Unique Routing:** `/:slug` routes for SEO and direct product linking (e.g., `/products/iphone-17-pro`).
 * **Products:** 3 products (iPhone 17 Pro, Samsung S25 Ultra, OnePlus 13), each with 2-3 color variants.
 
-## 📦 Database Schema
+##  Database Schema
 
 **Product Schema (`backend/models/Product.js`):**
 ```javascript
